@@ -46,7 +46,7 @@ export function Footer() {
                     </div>
                 </div>
                 <div className="pt-8 border-t border-white/10 text-center text-sm text-gray-400">
-                    <p>© 2025 TaskLoop. All rights reserved. Built with ❤️ for productivity enthusiasts.</p>
+                    <p>© 2025 TaskLoop. All rights reserved.</p>
                 </div>
             </div>
         </footer>

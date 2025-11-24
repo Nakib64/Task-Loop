@@ -222,16 +222,16 @@ export default function LandingPage() {
               }}
               className="group relative p-8 rounded-3xl glass-effect border border-white/10 hover:border-white/30 transition-all cursor-pointer overflow-hidden"
             >
-              {/* Gradient overlay on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${feature.linear} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
+              {/* linear overlay on hover */}
+              <div className={`absolute inset-0 bg-linear-to-br ${feature.linear} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
 
               {/* Subtle glow effect */}
-              <div className={`absolute -inset-1 bg-gradient-to-br ${feature.linear} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10`} />
+              <div className={`absolute -inset-1 bg-linear-to-br ${feature.linear} opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500 -z-10`} />
 
               <div className="relative z-10">
                 {/* Icon with animated background */}
                 <div className="relative mb-6">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.linear} flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg`}>
+                  <div className={`w-16 h-16 rounded-2xl bg-linear-to-br ${feature.linear} flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg`}>
                     <feature.icon className="w-8 h-8 text-white group-hover:scale-110 transition-transform" />
                   </div>
                   {/* Floating badge */}

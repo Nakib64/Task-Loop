@@ -3,12 +3,37 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth.config";
 import prisma from "@/lib/prisma";
 
-export async function GET() {
+export async function GET(request: Request) {
     try {
         const session = await getServerSession(authOptions);
+        const { searchParams } = new URL(request.url);
+        const filter = searchParams.get("filter");
 
-        // Fetch all courses with author details
+        let userId: string | undefined;
+
+        if (session?.user?.email) {
+            const user = await prisma.user.findUnique({
+                where: { email: session.user.email },
+                select: { id: true }
+            });
+            userId = user?.id;
+        }
+
+        let whereClause: any = {};
+
+        if (filter === "enrolled" && userId) {
+            whereClause = {
+                enrollments: {
+                    some: {
+                        userId: userId
+                    }
+                }
+            };
+        }
+
+        // Fetch courses with author details
         const courses = await prisma.course.findMany({
+            where: whereClause,
             include: {
                 author: {
                     select: {
@@ -28,20 +53,13 @@ export async function GET() {
 
         let enrolledCourseIds: string[] = [];
 
-        // If user is logged in, fetch their enrollments
-        if (session?.user?.email) {
-            const user = await prisma.user.findUnique({
-                where: { email: session.user.email },
-                select: { id: true }
+        // If user is logged in, fetch their enrollments to mark enrolled status
+        if (userId) {
+            const enrollments = await prisma.enrollment.findMany({
+                where: { userId: userId },
+                select: { courseId: true }
             });
-
-            if (user) {
-                const enrollments = await prisma.enrollment.findMany({
-                    where: { userId: user.id },
-                    select: { courseId: true }
-                });
-                enrolledCourseIds = enrollments.map(e => e.courseId);
-            }
+            enrolledCourseIds = enrollments.map(e => e.courseId);
         }
 
         return NextResponse.json({

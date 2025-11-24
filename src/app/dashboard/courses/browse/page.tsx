@@ -1,9 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
 import { Search, BookOpen } from "lucide-react";
-import Link from "next/link";
 import CourseCard from "@/components/dashboard/courses/CourseCard";
 import { toast } from "sonner";
 
@@ -23,37 +21,42 @@ interface Course {
     };
 }
 
-export default function CoursesPage() {
+export default function BrowseCoursesPage() {
     const [courses, setCourses] = useState<Course[]>([]);
+    const [enrolledCourseIds, setEnrolledCourseIds] = useState<string[]>([]);
     const [loading, setLoading] = useState(true);
     const [searchQuery, setSearchQuery] = useState("");
+    const [selectedDifficulty, setSelectedDifficulty] = useState<string | null>(null);
 
     useEffect(() => {
-        fetchEnrolledCourses();
+        fetchCourses();
     }, []);
 
-    const fetchEnrolledCourses = async () => {
+    const fetchCourses = async () => {
         try {
-            const res = await fetch("/api/courses?filter=enrolled");
+            const res = await fetch("/api/courses");
             const data = await res.json();
             setCourses(data.courses || []);
+            setEnrolledCourseIds(data.enrolledCourseIds || []);
         } catch (error) {
             console.error("Error fetching courses:", error);
-            toast.error("Failed to load your courses");
+            toast.error("Failed to load courses");
         } finally {
             setLoading(false);
         }
     };
 
-    const filteredCourses = courses.filter(course =>
-        course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        course.description.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+    const filteredCourses = courses.filter(course => {
+        const matchesSearch = course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            course.description.toLowerCase().includes(searchQuery.toLowerCase());
+        const matchesDifficulty = selectedDifficulty ? course.difficulty === selectedDifficulty : true;
+        return matchesSearch && matchesDifficulty;
+    });
 
     if (loading) {
         return (
             <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-900 flex items-center justify-center">
-                <div className="text-white text-xl">Loading your courses...</div>
+                <div className="text-white text-xl">Loading courses...</div>
             </div>
         );
     }
@@ -62,34 +65,41 @@ export default function CoursesPage() {
         <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-900 text-white p-6 md:p-12">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
-                    <div>
-                        <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
-                            My <span className="linear-text">Learning</span>
-                        </h1>
-                        <p className="text-gray-400 text-lg">
-                            Continue where you left off and track your progress.
-                        </p>
-                    </div>
-                    <Link href="/dashboard/courses/browse">
-                        <button className="px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white rounded-xl font-bold transition-all shadow-lg shadow-purple-500/20 flex items-center gap-2">
-                            <BookOpen className="w-5 h-5" />
-                            Browse Courses
-                        </button>
-                    </Link>
+                <div className="mb-12">
+                    <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+                        Explore <span className="linear-text">Micro-Courses</span>
+                    </h1>
+                    <p className="text-gray-400 text-lg max-w-2xl">
+                        Bite-sized learning modules to help you master new skills quickly.
+                        Track your progress and earn achievements.
+                    </p>
                 </div>
 
-                {/* Search */}
-                <div className="mb-8">
-                    <div className="relative max-w-md">
+                {/* Search and Filter */}
+                <div className="flex flex-col md:flex-row gap-4 mb-8">
+                    <div className="relative flex-1">
                         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                         <input
                             type="text"
-                            placeholder="Search your courses..."
+                            placeholder="Search courses..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                             className="w-full bg-white/5 border border-white/10 rounded-xl pl-10 pr-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors"
                         />
+                    </div>
+                    <div className="flex gap-2 overflow-x-auto pb-2 md:pb-0">
+                        {["Beginner", "Intermediate", "Advanced"].map((diff) => (
+                            <button
+                                key={diff}
+                                onClick={() => setSelectedDifficulty(selectedDifficulty === diff ? null : diff)}
+                                className={`px-4 py-2 rounded-xl border transition-all whitespace-nowrap ${selectedDifficulty === diff
+                                    ? "bg-purple-500 border-purple-500 text-white"
+                                    : "bg-white/5 border-white/10 text-gray-400 hover:bg-white/10"
+                                    }`}
+                            >
+                                {diff}
+                            </button>
+                        ))}
                     </div>
                 </div>
 
@@ -98,12 +108,7 @@ export default function CoursesPage() {
                     <div className="text-center py-20 glass-effect rounded-3xl border border-white/10">
                         <BookOpen className="w-16 h-16 mx-auto mb-4 text-gray-500" />
                         <h3 className="text-2xl font-bold mb-2">No courses found</h3>
-                        <p className="text-gray-400 mb-6">You haven't enrolled in any courses yet.</p>
-                        <Link href="/dashboard/courses/browse">
-                            <button className="px-6 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg font-semibold transition-all">
-                                Browse Catalog
-                            </button>
-                        </Link>
+                        <p className="text-gray-400">Try adjusting your search or filters</p>
                     </div>
                 ) : (
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -112,7 +117,7 @@ export default function CoursesPage() {
                                 key={course.id}
                                 course={course}
                                 index={index}
-                                isEnrolled={true}
+                                isEnrolled={enrolledCourseIds.includes(course.id)}
                             />
                         ))}
                     </div>

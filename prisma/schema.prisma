@@ -19,10 +19,8 @@ model User {
   
   accounts      Account[]
   sessions      Session[]
-  
   // Learning Goals
   goals         Goal[]
-
   // Micro-Courses
   enrollments   Enrollment[]
   comments      Comment[]
