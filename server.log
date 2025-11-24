@@ -1,0 +1,313 @@
+
+> taskloop@0.1.0 dev
+> next dev
+
+   ▲ Next.js 16.0.3 (Turbopack)
+   - Local:         http://localhost:3000
+   - Network:       http://192.168.0.102:3000
+   - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 855ms
+ ○ Compiling /register ...
+ GET /register 200 in 3.7s (compile: 3.3s, render: 468ms)
+ GET /register 200 in 1523ms (compile: 1134ms, render: 389ms)
+Initializing PrismaClient, DATABASE_URL: Defined
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\@prisma\client\runtime\client.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\node_modules_next_5d661447._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\require-hook.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\require.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\load-components.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+ ⨯ TypeError: Cannot read properties of undefined (reading '__internal')
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:72:33)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:104:148)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:185:156)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at instantiateRuntimeModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:743:12)
+    at getOrInstantiateRuntimeModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:756:12)
+    at Object.m (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:765:18)
+    at Object.<anonymous> (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\app\api\auth\[...nextauth]\route.js:8:3) {
+  page: '/api/auth/session'
+}
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\@prisma\client\runtime\client.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\node_modules_next_5d661447._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\require-hook.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\require.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\load-components.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+ ⨯ TypeError: Cannot read properties of undefined (reading '__internal')
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:72:33)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:104:148)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:185:156)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at instantiateRuntimeModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:743:12)
+    at getOrInstantiateRuntimeModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:756:12)
+    at Object.m (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:765:18)
+    at Object.<anonymous> (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\app\api\auth\[...nextauth]\route.js:8:3) {
+  page: '/api/auth/session'
+}
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\@prisma\client\runtime\client.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\node_modules_next_5d661447._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\require-hook.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\require.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\load-components.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+ ⨯ TypeError: Cannot read properties of undefined (reading '__internal')
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:72:33)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:104:148)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:185:156)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at instantiateRuntimeModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:743:12)
+    at getOrInstantiateRuntimeModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:756:12)
+    at Object.m (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:765:18)
+    at Object.<anonymous> (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\app\api\auth\[...nextauth]\route.js:8:3) {
+  page: '/api/auth/register'
+}
+ POST /api/auth/register 500 in 1892ms (compile: 1758ms, render: 134ms)
+ GET /api/auth/session 500 in 2.5s (compile: 2.5s, render: 26ms)
+ GET /api/auth/session 500 in 1916ms (compile: 1905ms, render: 11ms)
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\@prisma\client\runtime\client.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\node_modules_next_5d661447._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\require-hook.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\require.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\load-components.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+ ⨯ TypeError: Cannot read properties of undefined (reading '__internal')
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:72:33)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:104:148)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:185:156)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at instantiateRuntimeModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:743:12)
+    at getOrInstantiateRuntimeModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:756:12)
+    at Object.m (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:765:18)
+    at Object.<anonymous> (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\app\api\auth\[...nextauth]\route.js:8:3) {
+  page: '/api/auth/session'
+}
+ GET /api/auth/session 500 in 56ms (compile: 39ms, render: 18ms)
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\@prisma\client\runtime\client.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\node_modules_next_5d661447._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\require-hook.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\require.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\load-components.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+ ⨯ TypeError: Cannot read properties of undefined (reading '__internal')
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:72:33)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:104:148)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:185:156)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at instantiateRuntimeModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:743:12)
+    at getOrInstantiateRuntimeModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:756:12)
+    at Object.m (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:765:18)
+    at Object.<anonymous> (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\app\api\auth\[...nextauth]\route.js:8:3) {
+  page: '/api/auth/session'
+}
+ GET /api/auth/session 500 in 37ms (compile: 27ms, render: 11ms)
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\@prisma\client\runtime\client.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\node_modules_next_5d661447._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\require-hook.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\require.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\load-components.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+ ⨯ TypeError: Cannot read properties of undefined (reading '__internal')
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:72:33)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:104:148)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:185:156)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at instantiateRuntimeModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:743:12)
+    at getOrInstantiateRuntimeModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:756:12)
+    at Object.m (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:765:18)
+    at Object.<anonymous> (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\app\api\auth\[...nextauth]\route.js:8:3) {
+  page: '/api/auth/register'
+}
+ POST /api/auth/register 500 in 27ms (compile: 18ms, render: 9ms)
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\@prisma\client\runtime\client.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\node_modules_next_5d661447._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\require-hook.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\require.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\load-components.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+ ⨯ TypeError: Cannot read properties of undefined (reading '__internal')
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:72:33)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:104:148)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:185:156)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at instantiateRuntimeModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:743:12)
+    at getOrInstantiateRuntimeModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:756:12)
+    at Object.m (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:765:18)
+    at Object.<anonymous> (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\app\api\auth\[...nextauth]\route.js:8:3) {
+  page: '/api/auth/register'
+}
+ POST /api/auth/register 500 in 19ms (compile: 12ms, render: 6ms)
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\@prisma\client\runtime\client.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\node_modules_next_5d661447._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\require-hook.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\require.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\load-components.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+ ⨯ TypeError: Cannot read properties of undefined (reading '__internal')
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:72:33)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:104:148)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:185:156)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at instantiateRuntimeModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:743:12)
+    at getOrInstantiateRuntimeModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:756:12)
+    at Object.m (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:765:18)
+    at Object.<anonymous> (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\app\api\auth\[...nextauth]\route.js:8:3) {
+  page: '/api/auth/register'
+}
+ POST /api/auth/register 500 in 23ms (compile: 13ms, render: 10ms)
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\@prisma\client\runtime\client.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\node_modules_next_5d661447._.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\require-hook.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\require.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\load-components.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\next-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\lib\trace\tracer.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\dev\next-dev-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\server\base-server.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\node_modules\next\dist\trace\trace.js: Invalid source map. Only conformant source maps can be used to find the original code. Cause: Error: sourceMapURL could not be parsed
+ ⨯ TypeError: Cannot read properties of undefined (reading '__internal')
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:72:33)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:104:148)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at module evaluation (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[root-of-the-server]__9c602b3a._.js:185:156)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at getOrInstantiateModuleFromParent (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:738:12)
+    at Context.esmImport [as i] (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:228:20)
+    at instantiateModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:715:9)
+    at instantiateRuntimeModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:743:12)
+    at getOrInstantiateRuntimeModule (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:756:12)
+    at Object.m (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\chunks\[turbopack]_runtime.js:765:18)
+    at Object.<anonymous> (E:\Web Dev\Personal Learning\PostgreSQL_Prisma\taskloop\.next\dev\server\app\api\auth\[...nextauth]\route.js:8:3) {
+  page: '/api/auth/register'
+}
+ POST /api/auth/register 500 in 18ms (compile: 11ms, render: 6ms)
+^C

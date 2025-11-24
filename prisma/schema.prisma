@@ -1,0 +1,269 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DIRECT_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  emailVerified DateTime?
+  password      String
+  image         String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  accounts      Account[]
+  sessions      Session[]
+  
+  // Learning Goals
+  goals         Goal[]
+
+  // Micro-Courses
+  enrollments   Enrollment[]
+  comments      Comment[]
+  createdCourses Course[] @relation("CreatedCourses")
+
+  // Social Layer
+  followedBy    Follows[] @relation("followedBy")
+  following     Follows[] @relation("following")
+
+  // Notifications & Activity
+  notifications Notification[]
+  activities    ActivityLog[]
+
+  // Tasks, Habits & Calendar
+  tasks         Task[]
+  habits        Habit[]
+  habitLogs     HabitLog[]
+  calendarEvents CalendarEvent[]
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// --- Learning Goals ---
+
+model Goal {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  category    String
+  deadline    DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  milestones  Milestone[]
+}
+
+model Milestone {
+  id          String   @id @default(cuid())
+  title       String
+  isCompleted Boolean  @default(false)
+  goalId      String
+  goal        Goal     @relation(fields: [goalId], references: [id], onDelete: Cascade)
+}
+
+// --- Micro-Course System ---
+
+model Course {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  difficulty  String   // Beginner, Intermediate, Advanced
+  imageUrl    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  authorId    String
+  author      User     @relation("CreatedCourses", fields: [authorId], references: [id])
+
+  sections    Section[]
+  enrollments Enrollment[]
+  comments    Comment[]
+}
+
+model Section {
+  id        String   @id @default(cuid())
+  title     String
+  order     Int
+  courseId  String
+  course    Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  
+  lessons   Lesson[]
+}
+
+model Lesson {
+  id        String   @id @default(cuid())
+  title     String
+  content   String   // Markdown or HTML
+  order     Int
+  sectionId String
+  section   Section  @relation(fields: [sectionId], references: [id], onDelete: Cascade)
+
+  completedBy EnrollmentLesson[]
+}
+
+model Enrollment {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  courseId  String
+  course    Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  enrolledAt DateTime @default(now())
+  
+  completedLessons EnrollmentLesson[]
+
+  @@unique([userId, courseId])
+}
+
+model EnrollmentLesson {
+  id           String     @id @default(cuid())
+  enrollmentId String
+  enrollment   Enrollment @relation(fields: [enrollmentId], references: [id], onDelete: Cascade)
+  lessonId     String
+  lesson       Lesson     @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  completedAt  DateTime   @default(now())
+
+  @@unique([enrollmentId, lessonId])
+}
+
+model Comment {
+  id        String   @id @default(cuid())
+  content   String
+  createdAt DateTime @default(now())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  courseId  String
+  course    Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
+}
+
+// --- Social Layer ---
+
+model Follows {
+  followerId  String
+  followingId String
+  follower    User   @relation("following", fields: [followerId], references: [id])
+  following   User   @relation("followedBy", fields: [followingId], references: [id])
+
+  @@id([followerId, followingId])
+}
+
+// --- Notifications & Dashboard ---
+
+model Notification {
+  id        String   @id @default(cuid())
+  type      String   // FOLLOW, COURSE_UPDATE, DEADLINE
+  message   String
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  link      String?  // Optional link to related resource
+}
+
+model ActivityLog {
+  id        String   @id @default(cuid())
+  action    String   // COMPLETED_MILESTONE, ENROLLED_COURSE, etc.
+  details   String?
+  createdAt DateTime @default(now())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// --- Tasks ---
+
+model Task {
+  id          String    @id @default(cuid())
+  title       String
+  description String?
+  status      String    @default("TODO") // TODO, IN_PROGRESS, COMPLETED
+  priority    String    @default("MEDIUM") // LOW, MEDIUM, HIGH
+  dueDate     DateTime?
+  tags        String[]  @default([])
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  userId      String
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// --- Habits ---
+
+model Habit {
+  id          String     @id @default(cuid())
+  name        String
+  description String?
+  frequency   String     // DAILY, WEEKLY, MONTHLY
+  goal        Int        @default(1) // Target completions per period
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  userId      String
+  user        User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  logs        HabitLog[]
+}
+
+model HabitLog {
+  id        String   @id @default(cuid())
+  habitId   String
+  habit     Habit    @relation(fields: [habitId], references: [id], onDelete: Cascade)
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  date      DateTime @default(now())
+  completed Boolean  @default(true)
+
+  @@unique([habitId, date])
+}
+
+// --- Calendar ---
+
+model CalendarEvent {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  startTime   DateTime
+  endTime     DateTime
+  color       String?  @default("purple")
+  allDay      Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
