@@ -43,10 +43,10 @@ export default function DashboardPage() {
     ];
 
     return (
-        <div className="space-y-8 p-6">
+        <div className="space-y-8 p-6 md:p-12">
             <div>
-                <h1 className="text-3xl font-bold mb-2">
-                    Welcome back, <span className="linear-text">{session?.user?.name?.split(" ")[0]}</span> 👋
+                <h1 className="text-3xl md:text-4xl font-bold mb-2">
+                    Welcome back, <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">{session?.user?.name?.split(" ")[0]}</span> 👋
                 </h1>
                 <p className="text-gray-400">Here's what's happening with your projects today.</p>
             </div>
@@ -58,13 +58,13 @@ export default function DashboardPage() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }}
-                        className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/20 transition-colors"
+                        className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-blue-500/20 hover:border-blue-500/40 hover:bg-white/10 transition-all duration-300 shadow-lg"
                     >
                         <div className="flex justify-between items-start mb-4">
                             <div className={`p-3 rounded-xl ${stat.bg}`}>
                                 <stat.icon className={`w-6 h-6 ${stat.color}`} />
                             </div>
-                            <span className={`text-xs font-medium px-2 py-1 rounded-full ${stat.color === 'text-red-400' ? 'bg-red-500/10 text-red-400' : 'bg-white/5 text-gray-400'}`}>
+                            <span className={`text-xs font-medium px-2 py-1 rounded-full ${stat.color === 'text-red-400' ? 'bg-red-500/10 text-red-400' : 'bg-blue-500/10 text-blue-300'}`}>
                                 {stat.change}
                             </span>
                         </div>
@@ -75,12 +75,12 @@ export default function DashboardPage() {
             </div>
 
             <div className="grid lg:grid-cols-3 gap-8">
-                <div className="lg:col-span-2 p-6 rounded-2xl bg-white/5 border border-white/10">
+                <div className="lg:col-span-2 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-blue-500/20 shadow-lg">
                     <h2 className="text-xl font-bold mb-6">Recent Activity</h2>
                     <div className="space-y-6">
                         {[1, 2, 3].map((_, i) => (
-                            <div key={i} className="flex items-center gap-4 pb-4 border-b border-white/5 last:border-0 last:pb-0">
-                                <div className="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold text-sm">
+                            <div key={i} className="flex items-center gap-4 pb-4 border-b border-blue-500/10 last:border-0 last:pb-0">
+                                <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-sm">
                                     JD
                                 </div>
                                 <div className="flex-1">
@@ -92,7 +92,7 @@ export default function DashboardPage() {
                     </div>
                 </div>
 
-                <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
+                <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-blue-500/20 shadow-lg">
                     <h2 className="text-xl font-bold mb-6">Upcoming Deadlines</h2>
                     <div className="space-y-4">
                         {[
@@ -100,7 +100,7 @@ export default function DashboardPage() {
                             { title: "Client Meeting", date: "Tomorrow, 10:00 AM", urgent: false },
                             { title: "Sprint Planning", date: "Mon, 9:00 AM", urgent: false }
                         ].map((item, i) => (
-                            <div key={i} className="p-4 rounded-xl bg-white/5 border border-white/5 hover:border-white/10 transition-colors">
+                            <div key={i} className="p-4 rounded-xl bg-white/5 border border-blue-500/10 hover:border-blue-500/30 hover:bg-white/10 transition-all">
                                 <div className="flex justify-between items-start mb-2">
                                     <h4 className="font-medium text-sm">{item.title}</h4>
                                     {item.urgent && (

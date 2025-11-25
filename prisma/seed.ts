@@ -251,7 +251,9 @@ async function main() {
                             create: section.lessons.map(lesson => ({
                                 title: lesson.title,
                                 content: lesson.content,
-                                order: lesson.order
+                                order: lesson.order,
+                                // Demo video URL (Big Buck Bunny - open source demo video)
+                                videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4'
                             }))
                         }
                     }))

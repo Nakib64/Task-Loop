@@ -3,6 +3,19 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth.config";
 import prisma from "@/lib/prisma";
 
+interface LessonWithUnlock {
+    id: string;
+    title: string;
+    content: string;
+    videoUrl: string | null;
+    order: number;
+    sectionId: string;
+    sectionTitle: string;
+    sectionOrder: number;
+    isUnlocked: boolean;
+    isCompleted: boolean;
+}
+
 export async function GET(
     request: NextRequest,
     { params }: { params: Promise<{ courseId: string }> }
@@ -43,6 +56,21 @@ export async function GET(
 
         let isEnrolled = false;
         let completedLessonIds: string[] = [];
+        let lessonsWithStatus: LessonWithUnlock[] = [];
+
+        // Flatten all lessons across sections
+        const allLessons = course.sections.flatMap(section =>
+            section.lessons.map(lesson => ({
+                ...lesson,
+                sectionTitle: section.title,
+                sectionOrder: section.order
+            }))
+        ).sort((a, b) => {
+            if (a.sectionOrder !== b.sectionOrder) {
+                return a.sectionOrder - b.sectionOrder;
+            }
+            return a.order - b.order;
+        });
 
         // Check enrollment and progress
         if (session?.user?.email) {
@@ -69,6 +97,46 @@ export async function GET(
                 if (enrollment) {
                     isEnrolled = true;
                     completedLessonIds = enrollment.completedLessons.map(cl => cl.lessonId);
+
+                    // Calculate unlock status for each lesson
+                    lessonsWithStatus = allLessons.map((lesson, index) => {
+                        const isCompleted = completedLessonIds.includes(lesson.id);
+
+                        // First lesson is always unlocked
+                        if (index === 0) {
+                            return {
+                                id: lesson.id,
+                                title: lesson.title,
+                                content: lesson.content,
+                                videoUrl: lesson.videoUrl,
+                                order: lesson.order,
+                                sectionId: lesson.sectionId,
+                                sectionTitle: lesson.sectionTitle,
+                                sectionOrder: lesson.sectionOrder,
+                                isUnlocked: true,
+                                isCompleted
+                            };
+                        }
+
+                        // Check if all previous lessons are completed
+                        const previousLessons = allLessons.slice(0, index);
+                        const allPreviousCompleted = previousLessons.every(
+                            prevLesson => completedLessonIds.includes(prevLesson.id)
+                        );
+
+                        return {
+                            id: lesson.id,
+                            title: lesson.title,
+                            content: lesson.content,
+                            videoUrl: lesson.videoUrl,
+                            order: lesson.order,
+                            sectionId: lesson.sectionId,
+                            sectionTitle: lesson.sectionTitle,
+                            sectionOrder: lesson.sectionOrder,
+                            isUnlocked: allPreviousCompleted,
+                            isCompleted
+                        };
+                    });
                 }
             }
         }
@@ -76,7 +144,8 @@ export async function GET(
         return NextResponse.json({
             course,
             isEnrolled,
-            completedLessonIds
+            completedLessonIds,
+            lessons: lessonsWithStatus
         });
     } catch (error) {
         console.error("Error fetching course:", error);
@@ -86,3 +155,4 @@ export async function GET(
         );
     }
 }
+

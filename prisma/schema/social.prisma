@@ -1,0 +1,10 @@
+// Social Layer
+
+model Follows {
+  followerId  String
+  followingId String
+  follower    User   @relation("following", fields: [followerId], references: [id])
+  following   User   @relation("followedBy", fields: [followingId], references: [id])
+
+  @@id([followerId, followingId])
+}

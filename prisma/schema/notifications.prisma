@@ -1,0 +1,21 @@
+// Notifications & Dashboard
+
+model Notification {
+  id        String   @id @default(cuid())
+  type      String   // FOLLOW, COURSE_UPDATE, DEADLINE
+  message   String
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  link      String?  // Optional link to related resource
+}
+
+model ActivityLog {
+  id        String   @id @default(cuid())
+  action    String   // COMPLETED_MILESTONE, ENROLLED_COURSE, etc.
+  details   String?
+  createdAt DateTime @default(now())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}

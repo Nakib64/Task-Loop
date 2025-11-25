@@ -16,7 +16,6 @@ model User {
   image         String?
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
-  
   accounts      Account[]
   sessions      Session[]
   // Learning Goals
@@ -88,7 +87,6 @@ model Goal {
   updatedAt   DateTime @updatedAt
   userId      String
   user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  
   milestones  Milestone[]
 }
 
@@ -132,6 +130,7 @@ model Lesson {
   id        String   @id @default(cuid())
   title     String
   content   String   // Markdown or HTML
+  videoUrl  String?  // Video file path/URL (uploaded via admin panel)
   order     Int
   sectionId String
   section   Section  @relation(fields: [sectionId], references: [id], onDelete: Cascade)

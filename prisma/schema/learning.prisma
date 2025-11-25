@@ -1,0 +1,22 @@
+// Learning Goals and Milestones
+
+model Goal {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  category    String
+  deadline    DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  milestones  Milestone[]
+}
+
+model Milestone {
+  id          String   @id @default(cuid())
+  title       String
+  isCompleted Boolean  @default(false)
+  goalId      String
+  goal        Goal     @relation(fields: [goalId], references: [id], onDelete: Cascade)
+}
