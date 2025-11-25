@@ -1,6 +1,6 @@
 import 'dotenv/config'
 
-export default {
+const config={
   schema: 'prisma/schema.prisma',
   migrations: {
     path: 'prisma/migrations',
@@ -8,3 +8,5 @@ export default {
   // You can't really do datasource.url here like this;
   // Datasource URL belongs in schema.prisma or .env file
 }
+export default config;
+

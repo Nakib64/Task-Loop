@@ -78,6 +78,8 @@ export default function CourseDetailPage() {
             const res = await fetch(`/api/courses/${courseId}`);
             const data = await res.json();
 
+            console.log(data)
+
             if (res.ok) {
                 setCourse(data.course);
                 setIsEnrolled(data.isEnrolled);
@@ -175,7 +177,7 @@ export default function CourseDetailPage() {
 
     if (loading) {
         return (
-            <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-900 flex items-center justify-center">
+            <div className="min-h-screen bg-linear-to-br from-slate-950 via-purple-950 to-slate-900 flex items-center justify-center">
                 <div className="text-white text-xl flex items-center gap-3">
                     <Loader2 className="w-6 h-6 animate-spin" />
                     Loading course...
@@ -186,14 +188,17 @@ export default function CourseDetailPage() {
 
     if (!course) return null;
 
-    const totalLessons = lessons.length;
+    let totalLessons: number = 0;
+    for(const section of course.sections){
+        totalLessons += section.lessons.length;
+    }
     const completedCount = lessons.filter(l => l.isCompleted).length;
     const progress = totalLessons > 0 ? Math.round((completedCount / totalLessons) * 100) : 0;
 
     // Not enrolled view
     if (!isEnrolled) {
         return (
-            <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-900 text-white p-6 md:p-12">
+            <div className="min-h-screen bg-linear-to-br from-slate-950 via-purple-950 to-slate-900 text-white p-6 md:p-12">
                 <div className="max-w-5xl mx-auto">
                     <button
                         onClick={() => router.back()}
@@ -269,7 +274,7 @@ export default function CourseDetailPage() {
 
     // Enrolled view with video player
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-900 text-white p-6 md:p-12">
+        <div className="min-h-screen bg-linear-to-br from-slate-950 via-purple-950 to-slate-900 text-white p-6 md:p-12">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="flex items-center justify-between mb-8">
@@ -309,7 +314,7 @@ export default function CourseDetailPage() {
                                 title={currentLesson.title}
                             />
                         ) : (
-                            <div className="w-full aspect-video bg-gradient-to-br from-slate-900 to-purple-900 rounded-2xl flex items-center justify-center border border-white/10">
+                            <div className="w-full aspect-video bg-linear-to-br from-slate-900 to-purple-900 rounded-2xl flex items-center justify-center border border-white/10">
                                 <p className="text-white/70">No lesson selected</p>
                             </div>
                         )}
@@ -333,7 +338,7 @@ export default function CourseDetailPage() {
 
                             <button
                                 onClick={handleNext}
-                                disabled={completing || currentLessonIndex === lessons.length - 1}
+                                disabled={completing || currentLessonIndex === lessons.length }
                                 className="flex items-center gap-2 px-6 py-3 rounded-xl linear-primary hover:shadow-lg hover:shadow-purple-500/25 transition-all disabled:opacity-30 disabled:cursor-not-allowed font-medium"
                             >
                                 {completing ? (

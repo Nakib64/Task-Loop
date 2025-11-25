@@ -11,7 +11,6 @@ export default function VideoPlayer({ videoUrl, title }: VideoPlayerProps) {
     const videoRef = useRef<HTMLVideoElement>(null);
 
     useEffect(() => {
-        // Reset video when URL changes
         if (videoRef.current) {
             videoRef.current.load();
         }
@@ -37,9 +36,7 @@ export default function VideoPlayer({ videoUrl, title }: VideoPlayerProps) {
                         </svg>
                     </div>
                     <p className="text-white/70 text-lg font-medium">No video available</p>
-                    <p className="text-white/50 text-sm mt-2">
-                        Video content will be added soon
-                    </p>
+                    <p className="text-white/50 text-sm mt-2">Video content will be added soon</p>
                 </div>
             </div>
         );
