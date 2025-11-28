@@ -27,7 +27,7 @@ export default function AboutPage() {
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 0.4 }}
                         className="text-4xl md:text-6xl font-bold mb-6"
                     >
                         We're Building the <span className="linear-text">Future of Work</span>
@@ -35,7 +35,7 @@ export default function AboutPage() {
                     <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
+                        transition={{ duration: 0.4, delay: 0.2 }}
                         className="text-lg text-gray-300 max-w-3xl mx-auto"
                     >
                         TaskLoop was born from a simple idea: productivity shouldn't be complicated.
@@ -74,7 +74,7 @@ export default function AboutPage() {
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
+                    transition={{ duration: 0.4 }}
                     className="max-w-4xl mx-auto bg-white/5 backdrop-blur-xl p-8 md:p-12 rounded-3xl border border-white/10"
                 >
                     <h2 className="text-3xl font-bold mb-6">Our Story</h2>

@@ -120,7 +120,7 @@ export default function FeaturePage() {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.4 }}
           className="mb-6"
         >
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect text-sm font-medium border border-purple-400/30">
@@ -132,7 +132,7 @@ export default function FeaturePage() {
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
           className="text-5xl md:text-7xl font-extrabold leading-tight max-w-5xl mx-auto mb-6"
         >
           Powerful Features to <span className="linear-text">Supercharge Your Learning</span>
@@ -141,7 +141,7 @@ export default function FeaturePage() {
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.4, delay: 0.4 }}
           className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
         >
           TaskLoop brings structure, motivation, and community to your learning journey — all in one beautifully designed platform.

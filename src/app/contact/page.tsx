@@ -20,7 +20,7 @@ export default function ContactPage() {
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 0.4 }}
                     >
                         <h1 className="text-4xl md:text-6xl font-bold mb-6">
                             Get in <span className="linear-text">Touch</span>
@@ -63,7 +63,7 @@ export default function ContactPage() {
                     <motion.div
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
+                        transition={{ duration: 0.4, delay: 0.2 }}
                         className="bg-white/5 backdrop-blur-xl p-8 rounded-3xl border border-white/10"
                     >
                         <form className="space-y-6">

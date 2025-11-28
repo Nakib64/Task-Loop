@@ -53,7 +53,7 @@ export default function PricingPage() {
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 0.4 }}
                         className="text-4xl md:text-6xl font-bold mb-6"
                     >
                         Simple, Transparent <span className="linear-text">Pricing</span>
@@ -61,7 +61,7 @@ export default function PricingPage() {
                     <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
+                        transition={{ duration: 0.4, delay: 0.2 }}
                         className="text-lg text-gray-300 max-w-2xl mx-auto"
                     >
                         Choose the plan that fits your needs. No hidden fees. Cancel anytime.
